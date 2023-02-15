@@ -1,0 +1,9 @@
+body {
+    /*vai adicionar uma imagem com um caminho(url) colocando onde está a imagem,*/
+    /*background-image: url(assets/Mobile\ black-\ 1080x1920.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;*/
+    /*shorthand -> background: color image repeat position/size*/
+    background: url(assets/Mobile\ black-\ 1080x1920.jpg) no-repeat top center/cover;
+}
