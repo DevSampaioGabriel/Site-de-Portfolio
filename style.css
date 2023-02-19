@@ -12,7 +12,9 @@
     --background-hover-color: rgba(82, 74, 8, 0.7);
     --border-color: goldenrod;
     --bg-url: url(assets/Mobile\ black-\ 1080x1920.jpg);
-    --switch-bg-url: url(assets/moonstar.png);
+    --switch-bg-url: url(assets/MoonStars.svg);
+    --switch-bg-color: rgb(129, 54, 199);
+    
 }
 /*lightmode configurações visuais */
 
@@ -25,6 +27,8 @@
     --background-hover-color: rgba(0, 0, 0, 0.5);
     --background-icon-color: rgba(194, 166, 11, 0.5);
     --switch-bg-url: url(assets/Sun.svg);
+    --switch-bg-color: rgba(255, 230, 3);
+    
 }
 
 body {
@@ -47,13 +51,23 @@ body * {
 }
 
 /* Botão dark/light mode. */
-#switch buttom {
-    background: white var(--switch-bg-url) no-repeat center;
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button {
+    background: var(--switch-bg-color) var(--switch-bg-url) no-repeat center;
     width: 32px;  
     height: 32px;
     border: 0;
     border-radius: 50%;
-    
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
 }
 #switch span {
     display: block;
@@ -64,6 +78,11 @@ body * {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 9999px;
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
 }
 
 /* Profile */
