@@ -11,18 +11,18 @@
     --background-icon-color: rgba(250, 250, 250, 0.2);
     --background-hover-color: rgba(82, 74, 8, 0.7);
     --border-color: goldenrod;
-    --bg-url: url(assets/Mobile\ black-\ 1080x1920.jpg);
+    --bg-url: url(assets/Black\ Phone\ Wallpaper.png);
     --switch-bg-url: url(assets/MoonStars.svg);
-    --switch-bg-color: rgb(129, 54, 199);
+    --switch-bg-color: rgb(192, 147, 0);
     
 }
 /*lightmode configurações visuais */
 
 .light {
-    --text-color: black;
-    --bg-url: url(assets/Mobile\ -\ 1080x1920.jpg);
+    --text-color: whitesmoke;
+    --bg-url: url(assets/White\ Phone\ Wallpaper.png);
     --hover-text-color: rgb(236, 184, 53);
-    --background-color: rgba(53, 41, 2, 0.3);
+    --background-color: rgba(214, 160, 11, 0.4);
     --border-color: goldenrod;
     --background-hover-color: rgba(0, 0, 0, 0.5);
     --background-icon-color: rgba(194, 166, 11, 0.5);
@@ -39,13 +39,15 @@ body {
     background-size: cover;*/
     /*shorthand -> background: color image repeat position/size*/
     background: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
 }
 body * {
     font-family: 'Inter', sans-serif;
     color: var(--text-color);
 }
 #container {
-    width: 360px;
+    width: 100%;
+    max-width: 588px;
     margin: 56px auto 0px;
     padding: 0 24px;
 }
@@ -155,4 +157,13 @@ footer {
     padding: 24px 0;
     text-align: center;
     font-size: 14px;
+}
+/* media queries */
+@media (min-widht: 700px) {
+    :root {
+        --bg-url: url(assets/Black\ Wallpaper\ \(1920\ ×\ 1080\ px\).png);
+    }
+    .light {
+        --bg-url: url(assets/White\ Wallpaper\ \(1920\ ×\ 1080\ px\).png);
+    }
 }
